@@ -1,0 +1,326 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduWorld - Education Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Edu<span>World</span></h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button id="darkModeBtn" class="theme-btn">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">WELCOME TO EDUWORLD</p>
+
+            <h1>Learn Today,<br><span>Lead Tomorrow.</span></h1>
+
+            <p>
+                Explore educational blogs, programming tutorials,
+                study notes and learning resources to improve your skills.
+            </p>
+
+            <a href="#blogs" class="main-btn">Explore Blogs →</a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+                alt="Student studying at a desk">
+        </div>
+    </section>
+
+    <!-- Search Section --> 
+    <section class="search-section">
+        <h2>Explore Our Educational Blogs</h2>
+
+        <p>Find articles, tutorials and study resources.</p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Java, Python, Maths..."
+        >
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <h2>Explore Categories</h2>
+
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="All">All</button>
+            <button class="category-btn" data-category="Programming">Programming</button>
+            <button class="category-btn" data-category="Web Development">Web Development</button>
+            <button class="category-btn" data-category="Mathematics">Mathematics</button>
+            <button class="category-btn" data-category="Database">Database</button>
+        </div>
+    </section>
+
+    <!-- Blogs Section -->
+    <section class="blogs-section" id="blogs">
+        <div class="section-heading">
+            <div>
+                <h2>Latest Educational Blogs</h2>
+                <p>Learn something new every day.</p>
+            </div>
+
+            <button class="main-btn" id="addBlogBtn">+ Add Blog</button>
+        </div>
+
+        <!-- Add Blog Form -->
+        <form id="blogForm" class="blog-form hidden">
+            <h3>Create a New Blog</h3>
+
+            <input
+                type="text"
+                id="blogTitle"
+                placeholder="Enter blog title"
+                required
+            >
+
+            <select id="blogCategory" required>
+                <option value="">Select Category</option>
+                <option value="Programming">Programming</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Database">Database</option>
+            </select>
+
+            <textarea
+                id="blogDescription"
+                placeholder="Write your blog content..."
+                required
+            ></textarea>
+
+            <button type="submit" class="main-btn">Publish Blog</button>
+        </form>
+
+        <div class="blog-container" id="blogContainer">
+
+            <!-- Blog 1 -->
+            <article class="blog-card"
+                data-category="Programming"
+                data-title="Java Programming">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80"
+                    alt="Programming code">
+
+                <div class="blog-content">
+                    <span class="badge">Programming</span>
+                    <h3>Introduction to Java Programming</h3>
+
+                    <p>
+                        Learn Java basics, variables, data types,
+                        classes and objects in simple language.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="Introduction to Java Programming"
+                        data-content="Java is a high-level, object-oriented programming language. It is used to develop desktop, web and enterprise applications. Important Java concepts include variables, data types, classes, objects, inheritance and polymorphism.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="blog-card"
+                data-category="Web Development"
+                data-title="HTML and CSS">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                    alt="Web development workspace">
+
+                <div class="blog-content">
+                    <span class="badge">Web Development</span>
+                    <h3>Learn HTML and CSS</h3>
+
+                    <p>
+                        Discover how HTML structures web pages
+                        and CSS makes them beautiful.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="Learn HTML and CSS"
+                        data-content="HTML stands for HyperText Markup Language. It creates the structure of a webpage. CSS stands for Cascading Style Sheets. It controls colours, fonts, spacing and layout. Together, they are the foundation of frontend web development.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Blog 3 -->
+            <article class="blog-card"
+                data-category="Mathematics"
+                data-title="Discrete Mathematics">
+
+                <img
+                    src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=700&q=80"
+                    alt="Mathematical equations">
+
+                <div class="blog-content">
+                    <span class="badge">Mathematics</span>
+                    <h3>Understanding Discrete Mathematics</h3>
+
+                    <p>
+                        Learn sets, relations, functions, graphs
+                        and logic with easy examples.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="Understanding Discrete Mathematics"
+                        data-content="Discrete Mathematics studies mathematical structures that are countable or distinct. Important topics include sets, relations, functions, logic, graphs, trees and algebraic structures. It is widely used in computer science.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Blog 4 -->
+            <article class="blog-card"
+                data-category="Database"
+                data-title="DBMS Basics">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=700&q=80"
+                    alt="Database concepts">
+
+                <div class="blog-content">
+                    <span class="badge">Database</span>
+                    <h3>Introduction to DBMS</h3>
+
+                    <p>
+                        Understand databases, tables, SQL queries,
+                        primary keys and foreign keys.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="Introduction to DBMS"
+                        data-content="DBMS stands for Database Management System. It helps users store, organize, retrieve and manage data. Examples include MySQL, Oracle and PostgreSQL. SQL is commonly used to communicate with relational databases.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Blog 5 -->
+            <article class="blog-card"
+                data-category="Programming"
+                data-title="Python Programming">
+
+                <img
+                    src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=700&q=80"
+                    alt="Python programming">
+
+                <div class="blog-content">
+                    <span class="badge">Programming</span>
+                    <h3>Getting Started with Python</h3>
+
+                    <p>
+                        Start learning Python variables, loops,
+                        functions and basic programming.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="Getting Started with Python"
+                        data-content="Python is a high-level programming language known for its readable syntax. It is used in web development, automation, data analysis and artificial intelligence. Beginners can start with variables, conditions, loops and functions.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+            <!-- Blog 6 -->
+            <article class="blog-card"
+                data-category="Web Development"
+                data-title="JavaScript Basics">
+
+                <img
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+                    alt="JavaScript code">
+
+                <div class="blog-content">
+                    <span class="badge">Web Development</span>
+                    <h3>JavaScript for Beginners</h3>
+
+                    <p>
+                        Learn how JavaScript adds interactivity
+                        and dynamic behaviour to websites.
+                    </p>
+
+                    <button class="read-btn"
+                        data-title="JavaScript for Beginners"
+                        data-content="JavaScript is a programming language used to make webpages interactive. It can respond to button clicks, validate forms, filter content and update page elements. It works alongside HTML and CSS.">
+                        Read More →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="noResults" class="hidden">No blogs found. Try another search!</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>About EduWorld</h2>
+
+        <p>
+            EduWorld is an educational blogging platform designed
+            to help students learn programming, explore technology
+            and prepare for exams through simple and useful articles.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+
+        <p>Have a question or suggestion? Send us a message.</p>
+
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="main-btn">Send Message</button>
+        </form>
+
+        <p id="contactMessage" class="hidden"></p>
+    </section>
+
+    <!-- Blog Details Modal -->
+    <div id="blogModal" class="modal hidden">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+            <h2 id="modalTitle"></h2>
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h2>EduWorld</h2>
+        <p>Learn • Explore • Grow</p>
+        <p>© 2026 EduWorld | Education Blog Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
